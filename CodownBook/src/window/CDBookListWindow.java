@@ -7,6 +7,7 @@ import com.intellij.openapi.ui.MessageDialogBuilder;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
 import data.DataCenter;
+import dialog.GenSuccessDialog;
 import org.jetbrains.annotations.NotNull;
 import processor.FreeMarkerProcessor;
 import processor.SourceBookData;
@@ -16,6 +17,7 @@ import processor.Processor;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 
 public class CDBookListWindow {
@@ -25,6 +27,8 @@ public class CDBookListWindow {
     private JButton clearButton;
     private JButton closeButton;
     private JPanel contentPanel;
+    private JButton undoButton;
+
 
     public JPanel getContentPanel() {
         return contentPanel;
@@ -43,10 +47,10 @@ public class CDBookListWindow {
             public void actionPerformed(ActionEvent e) {
                 //选择路径,生成文档
                 String bookTopic= CDBookTopicTextField.getText();
-                //获取文件名
+                //获取文件名, 文件名就是 topic 加上一个 .md
                 String fileName = bookTopic + ".md";
-                if (fileName == null || fileName.equals("")) {
-                    MessageDialogBuilder.yesNo("Warming", "Please enter CodownBook fileName");
+                if (bookTopic == null || bookTopic.equals("")) {
+                    MessageDialogBuilder.yesNo("Warming", "Please enter CodownBook topic !");
                     return;
                 }
 
@@ -58,12 +62,16 @@ public class CDBookListWindow {
 
                     Processor processor=new FreeMarkerProcessor();
                     try {
-                        processor.process(new SourceBookData(fileFullPath,bookTopic,DataCenter.BOOK_DATA));
+                        processor.process(new SourceBookData(fileFullPath,bookTopic,DataCenter.BOOK_DATA_LIST));
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
 
                 }
+
+                GenSuccessDialog genSuccessDialog = new GenSuccessDialog();
+                genSuccessDialog.show();
+
             }
         });
 
@@ -78,6 +86,13 @@ public class CDBookListWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 toolWindow.hide(null);//关闭窗口
+            }
+        });
+
+        undoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                DataCenter.undo();//移去最后一行
             }
         });
     }

@@ -6,14 +6,14 @@ import java.util.List;
 
 //交给 FreeMarker 处理的最终数据类型
 public class SourceBookData {
-    private String fileName;
+    private String fileName;// 文件名, 就是 CodownBook 的topic 加上 .md 后缀
     private String topic;
-    private BookData bookData;
+    private List<BookData> bookDataList;
 
-    public SourceBookData(String fileName, String topic, BookData bookData) {
+    public SourceBookData(String fileName, String topic, List<BookData> bookDataList) {
         this.fileName = fileName;
         this.topic = topic;
-        this.bookData = bookData;
+        this.bookDataList= bookDataList;
     }
 
     public String getFileName() {
@@ -24,7 +24,9 @@ public class SourceBookData {
         return topic;
     }
 
-    public BookData getBookData() {
-        return bookData;
+
+
+    public List<BookData>getBookDataList() {
+        return bookDataList;
     }
 }

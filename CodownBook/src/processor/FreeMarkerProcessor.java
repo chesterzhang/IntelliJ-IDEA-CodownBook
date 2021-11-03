@@ -10,13 +10,14 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
+// FreeMarker 处理 CodownBook
 public class FreeMarkerProcessor implements Processor  {
 
     @Override
     public void process(SourceBookData sourceBookData) throws IOException {
-        Template template=getTemplate();
-        Object model=getModel(sourceBookData);
-        Writer writer =getWriter(sourceBookData);
+        Template template=getTemplate();//获取 FreeMarker 模板
+        Object model=getModel(sourceBookData);//用 sourceBookData 构建一个模型
+        Writer writer =getWriter(sourceBookData);//获取一个 写入 对象
         try {
             template.process(model,writer);
         } catch (TemplateException e) {
@@ -31,7 +32,7 @@ public class FreeMarkerProcessor implements Processor  {
     protected Object getModel(SourceBookData sourceBookData) {
         Map<String,Object> model=new HashMap<>();
         model.put("Topic", sourceBookData.getTopic());
-        model.put("BookData",sourceBookData.getBookData());
+        model.put("BookDataList",sourceBookData.getBookDataList());
         return model;
     }
 

@@ -59,6 +59,12 @@
               <text value="close"/>
             </properties>
           </component>
+          <component id="337bc" class="javax.swing.JButton" binding="undoButton">
+            <constraints/>
+            <properties>
+              <text value="undo"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <scrollpane id="4e702">

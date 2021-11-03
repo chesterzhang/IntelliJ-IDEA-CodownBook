@@ -8,6 +8,7 @@ import com.intellij.openapi.editor.SelectionModel;
 import data.DataCenter;
 import dialog.AddCDBookDialog;
 
+//在 IDEA 中创建一个 acction, 也就是鼠标右键生成一个窗口
 public class PopupAction extends AnAction {
 
     @Override
@@ -18,8 +19,10 @@ public class PopupAction extends AnAction {
 
         //获取当前编辑器对象
         Editor editor = e.getRequiredData(CommonDataKeys.EDITOR);
+
         //获取选择的数据模型
         SelectionModel selectionModel = editor.getSelectionModel();
+
         //获取当前选择的文本
         String selectedText = selectionModel.getSelectedText();
         //System.out.println(selectedText);//测试OK
@@ -38,6 +41,11 @@ public class PopupAction extends AnAction {
         //弹出 AddCDbookDialog, 也就是一个窗口
         AddCDBookDialog addCDBookDialog=new AddCDBookDialog();
         addCDBookDialog.show();
+
+
+
+
+
 
     }
 }

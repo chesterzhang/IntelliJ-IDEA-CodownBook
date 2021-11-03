@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0521a98e-632d-4e6f-a34e-9b23ea5d6e5c" name="Default Changelist" comment="" />
+    <list default="true" id="0521a98e-632d-4e6f-a34e-9b23ea5d6e5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodownBookTest/CodownBookTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/template/md.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/template/md.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/PopupAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/PopupAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/BookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/BookData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/DataCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DataCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dialog/AddCDBookDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dialog/AddCDBookDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processor/FreeMarkerProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/processor/FreeMarkerProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processor/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/processor/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processor/SourceBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/processor/SourceBookData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/window/CDBookListWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/window/CDBookListWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/window/CDBookListWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/window/CDBookListWindow.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +30,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -34,10 +51,12 @@
     </option>
   </component>
   <component name="ProjectId" id="1zoKLtk3Fy6UD1OBtZYleLv9kFP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MarkBook" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,10 +111,22 @@
       <option name="presentableId" value="Default" />
       <updated>1634808947356</updated>
       <workItem from="1634808950458" duration="42110000" />
+      <workItem from="1635866879076" duration="13662000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

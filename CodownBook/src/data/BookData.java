@@ -1,6 +1,6 @@
 package data;
 
-//每一个CodownBook 的内容
+//每一行 CodownBook 的内容, 有笔记标题,  评论, 被选中的文本,  文件名, 文件类型
 public class BookData {
 
     private String title;//笔记标题

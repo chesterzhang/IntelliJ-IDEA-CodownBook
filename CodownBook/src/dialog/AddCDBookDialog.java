@@ -10,6 +10,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 import java.awt.*;
 
+// 鼠标右键,IDEA 中弹出来一个窗口, 这个类就是窗口类
 public class AddCDBookDialog extends DialogWrapper {
     public AddCDBookDialog() {
         super(true);
@@ -49,18 +50,21 @@ public class AddCDBookDialog extends DialogWrapper {
             //通过选择的文本, 在文本框内输入的标题, 内容
             BookData bookData=new BookData(title,mark,DataCenter.SELECTED_TEXT,DataCenter.CURRENT_FILE_NAME,DataCenter.CURRENT_FILE_TYPE);
 
-            //以防万一, 清空DataCenter
-            DataCenter.clear();
+
 
             //将当前这一条笔记加入到 DataCenter中
-            DataCenter.BOOK_DATA=bookData;
+            DataCenter.BOOK_DATA_LIST.add(bookData);
 
             //TABLE_MODEL 是 IDEA 中用来存储表格的数据结构, addRow 方法表示 加一行数据
             DataCenter.TABLE_MODEL.addRow(DataConverter.convert(bookData));
         });
         panel.add(btnAdd);
+
+
         return panel;
 
     }
+
+
 
 }
