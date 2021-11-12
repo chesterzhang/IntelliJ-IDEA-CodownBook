@@ -8,14 +8,21 @@ public class BookData {
     private String selectedText;//代码内被选中的内容
     private String fileName;//文件名
     private String fileType;//文件类型
+    private String funcName;//提取的函数名称
+    private String funcAccModifiers;//提取的函数访问修饰符
+    private String funcReturnType;//提取的函数返回值类型
+    private String funcParameters;//提取的函数参数
 
-
-    public BookData(String title, String mark, String selectedText, String fileName, String fileType) {
+    public BookData(String title, String mark, String selectedText, String fileName, String fileType, String funcName, String funcAccModifiers, String funcReturnType, String funcParameters) {
         this.title = title;
         this.mark = mark;
         this.selectedText = selectedText;
         this.fileName = fileName;
         this.fileType = fileType;
+        this.funcName = funcName;
+        this.funcAccModifiers = funcAccModifiers;
+        this.funcReturnType = funcReturnType;
+        this.funcParameters = funcParameters;
     }
 
     public String getTitle() {
@@ -58,6 +65,38 @@ public class BookData {
         this.fileType = fileType;
     }
 
+    public String getFuncName() {
+        return funcName;
+    }
+
+    public void setFuncName(String funcName) {
+        this.funcName = funcName;
+    }
+
+    public String getFuncAccModifiers() {
+        return funcAccModifiers;
+    }
+
+    public void setFuncAccModifiers(String funcAccModifiers) {
+        this.funcAccModifiers = funcAccModifiers;
+    }
+
+    public String getFuncReturnType() {
+        return funcReturnType;
+    }
+
+    public void setFuncReturnType(String funcReturnType) {
+        this.funcReturnType = funcReturnType;
+    }
+
+    public String getFuncParameters() {
+        return funcParameters;
+    }
+
+    public void setFuncParameters(String funcParameters) {
+        this.funcParameters = funcParameters;
+    }
+
 
 
     @Override
@@ -68,6 +107,10 @@ public class BookData {
                 ", selectedText='" + selectedText + '\'' +
                 ", fileName='" + fileName + '\'' +
                 ", fileType='" + fileType + '\'' +
+                ", funcName='" + funcName + '\'' +
+                ", funcName='" + funcAccModifiers + '\'' +
+                ", funcName='" + funcReturnType + '\'' +
+                ", funcName='" + funcParameters + '\'' +
                 '}';
     }
 

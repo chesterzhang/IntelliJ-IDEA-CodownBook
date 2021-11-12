@@ -27,7 +27,6 @@ public class FreeMarkerProcessor implements Processor  {
         }
     }
 
-
     //返回一个HashMap 字典, 交给 freeMark 的 template 进行写入操作, 输出 markdown 文档
     protected Object getModel(SourceBookData sourceBookData) {
         Map<String,Object> model=new HashMap<>();
@@ -35,8 +34,6 @@ public class FreeMarkerProcessor implements Processor  {
         model.put("BookDataList",sourceBookData.getBookDataList());
         return model;
     }
-
-    //这个方法是 FreeMarker的, 照抄先, 先不管, 总之就是返回一个 FreeMarker的模板配置文件
 
     protected Template getTemplate() throws IOException {
         //加载freemarker模板字符串
@@ -57,7 +54,6 @@ public class FreeMarkerProcessor implements Processor  {
     }
 
     //获取writer, 完成写入操作
-
     protected Writer getWriter(SourceBookData sourceBookData) throws FileNotFoundException, UnsupportedEncodingException {
         String fileName=sourceBookData.getFileName();
         File file=new File(fileName);

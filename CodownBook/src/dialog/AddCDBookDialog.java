@@ -46,11 +46,8 @@ public class AddCDBookDialog extends DialogWrapper {
             String mark=markField.getText();
 //            System.out.println(title+": "+content);
 
-
             //通过选择的文本, 在文本框内输入的标题, 内容
-            BookData bookData=new BookData(title,mark,DataCenter.SELECTED_TEXT,DataCenter.CURRENT_FILE_NAME,DataCenter.CURRENT_FILE_TYPE);
-
-
+            BookData bookData=new BookData(title,mark,DataCenter.SELECTED_TEXT,DataCenter.CURRENT_FILE_NAME,DataCenter.CURRENT_FILE_TYPE, DataCenter.FUNC_NAME, DataCenter.FUNC_ACCESS_MODIFIERS, DataCenter.FUNC_RETURN_TYPE, DataCenter.FUNC_PARAMETERS);
 
             //将当前这一条笔记加入到 DataCenter中
             DataCenter.BOOK_DATA_LIST.add(bookData);
@@ -60,11 +57,6 @@ public class AddCDBookDialog extends DialogWrapper {
         });
         panel.add(btnAdd);
 
-
         return panel;
-
     }
-
-
-
 }

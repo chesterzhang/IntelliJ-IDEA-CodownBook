@@ -24,8 +24,6 @@ public class SourceBookData {
         return topic;
     }
 
-
-
     public List<BookData>getBookDataList() {
         return bookDataList;
     }
