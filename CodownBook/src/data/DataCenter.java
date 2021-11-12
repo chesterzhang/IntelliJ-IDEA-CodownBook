@@ -20,6 +20,12 @@ public class DataCenter {
 //    public static BookData BOOK_DATA = null;
     public static List<BookData> BOOK_DATA_LIST = new LinkedList<>();
 
+    //提取出的函数信息
+    public static String FUNC_NAME = null;
+    public static String FUNC_ACCESS_MODIFIERS = null;
+    public static String FUNC_RETURN_TYPE = null;
+    public static String FUNC_PARAMETERS = null;
+
     //笔记表头, 标题, 评论, 文件名, 选中的文本
     public static String[] BOOK_HEAD={"title","mark","fileName","selectedText"};
 
@@ -39,6 +45,22 @@ public class DataCenter {
 
     public  static  void setCurentFileType(String fileType ){
         CURRENT_FILE_TYPE=fileType;
+    }
+
+    public  static  void setFuncName(String funcName ){
+        FUNC_NAME = funcName;
+    }
+
+    public  static  void setFuncAccessModifiers(String funcAccModifiers ){
+        FUNC_ACCESS_MODIFIERS = funcAccModifiers;
+    }
+
+    public  static  void setFuncReturnType(String funcReturnType){
+        FUNC_RETURN_TYPE = funcReturnType;
+    }
+
+    public  static  void setFuncParameters(String funcParameters ){
+        FUNC_PARAMETERS = funcParameters;
     }
 
     //当按下图形化窗口的 clear button 以后调用这个方法

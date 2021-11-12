@@ -1,11 +1,15 @@
 package action;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
 import data.DataCenter;
+import data.ExtractFunction;
 import dialog.AddCDBookDialog;
 
 //在 IDEA 中创建一个 acction, 也就是鼠标右键生成一个窗口
@@ -29,6 +33,23 @@ public class PopupAction extends AnAction {
 
         //将选择的文本传入到 DataCenter 类中处理
         DataCenter.setSelectText(selectedText);
+
+        //将选择的文本传入 ExtractFunction 中处理
+        String jsonFunctionInfo = ExtractFunction.Extract(selectedText);
+
+        //获取返回的 Json 数据
+        JSONArray jsonArray = JSON.parseArray(jsonFunctionInfo);
+        JSONObject jsonObject = jsonArray.getJSONObject(0);
+
+        String funcName = jsonObject.getString("FunctionName");
+        String funcAccModifiers = jsonObject.getString("FunctionAccMod");
+        String funcReturnType = jsonObject.getString("FunctionRetType");
+        String funcParameters = jsonObject.getString("FunctionPara");
+
+        DataCenter.setFuncName(funcName);
+        DataCenter.setFuncAccessModifiers(funcAccModifiers);
+        DataCenter.setFuncReturnType(funcReturnType);
+        DataCenter.setFuncParameters(funcParameters);
 
         //将选择的文本的文件名称传入到 DataCenter 类中处理
         String name=e.getRequiredData(CommonDataKeys.PSI_FILE).getViewProvider().getVirtualFile().getName();
