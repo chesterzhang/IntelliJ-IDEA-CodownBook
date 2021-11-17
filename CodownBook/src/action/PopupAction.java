@@ -12,32 +12,32 @@ import data.DataCenter;
 import data.ExtractFunction;
 import dialog.AddCDBookDialog;
 
-//在 IDEA 中创建一个 acction, 也就是鼠标右键生成一个窗口
+// Create an action in IDEA. That is, right-click to generate a window
 public class PopupAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
         // TODO: insert action logic here
-        //测试右键是否弹出 addd CodownBook 菜单选项
-        //System.out.println("add CodownBook memu test"); //测试OK
+        // Test whether the add codownbook menu option pops up by right clicking
+        // System.out.println("add CodownBook memu test");
 
-        //获取当前编辑器对象
+        // Gets the current editor object
         Editor editor = e.getRequiredData(CommonDataKeys.EDITOR);
 
-        //获取选择的数据模型
+        // Get selected data model
         SelectionModel selectionModel = editor.getSelectionModel();
 
-        //获取当前选择的文本
+        // Gets the currently selected text
         String selectedText = selectionModel.getSelectedText();
-        //System.out.println(selectedText);//测试OK
+        // System.out.println(selectedText);//test OK
 
-        //将选择的文本传入到 DataCenter 类中处理
+        // Send the selected text into the DataCenter class for processing
         DataCenter.setSelectText(selectedText);
 
-        //将选择的文本传入 ExtractFunction 中处理
+        // Pass the selected text into ExtractFunction for processing
         String jsonFunctionInfo = ExtractFunction.Extract(selectedText);
 
-        //获取返回的 Json 数据
+        // Get the returned JSON data
         JSONArray jsonArray = JSON.parseArray(jsonFunctionInfo);
         JSONObject jsonObject = jsonArray.getJSONObject(0);
 
@@ -51,15 +51,15 @@ public class PopupAction extends AnAction {
         DataCenter.setFuncReturnType(funcReturnType);
         DataCenter.setFuncParameters(funcParameters);
 
-        //将选择的文本的文件名称传入到 DataCenter 类中处理
+        // Pass the file name of the selected text into the DataCenter class for processing
         String name=e.getRequiredData(CommonDataKeys.PSI_FILE).getViewProvider().getVirtualFile().getName();
         DataCenter.setCurentFileName(name);
 
-        //从文件名截取出文件类型, 传入 DataCenter
+        // Extract the file type from the file name and pass it into the DataCenter
         String fileType= DataCenter.CURRENT_FILE_NAME.substring(DataCenter.CURRENT_FILE_NAME.lastIndexOf(".")+1);
         DataCenter.setCurentFileType(fileType);
 
-        //弹出 AddCDbookDialog, 也就是一个窗口
+        // Pop up AddCDbookDialog, that's a window
         AddCDBookDialog addCDBookDialog=new AddCDBookDialog();
         addCDBookDialog.show();
 
