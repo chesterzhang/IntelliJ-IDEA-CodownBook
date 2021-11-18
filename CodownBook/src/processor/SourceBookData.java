@@ -4,9 +4,9 @@ import data.BookData;
 
 import java.util.List;
 
-//交给 FreeMarker 处理的最终数据类型
+// Final data type to FreeMarker for processing
 public class SourceBookData {
-    private String fileName;// 文件名, 就是 CodownBook 的topic 加上 .md 后缀
+    private String fileName;// The file name is the topic of codownbook plus .md
     private String topic;
     private List<BookData> bookDataList;
 

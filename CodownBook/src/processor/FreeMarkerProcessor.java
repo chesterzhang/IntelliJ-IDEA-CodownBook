@@ -10,14 +10,14 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-// FreeMarker 处理 CodownBook
+// FreeMarker handles CodownBook
 public class FreeMarkerProcessor implements Processor  {
 
     @Override
     public void process(SourceBookData sourceBookData) throws IOException {
-        Template template=getTemplate();//获取 FreeMarker 模板
-        Object model=getModel(sourceBookData);//用 sourceBookData 构建一个模型
-        Writer writer =getWriter(sourceBookData);//获取一个 写入 对象
+        Template template=getTemplate();// Get FreeMarker template
+        Object model=getModel(sourceBookData);// Build a model with sourceBookData
+        Writer writer =getWriter(sourceBookData);// Get a writer object
         try {
             template.process(model,writer);
         } catch (TemplateException e) {
@@ -27,7 +27,7 @@ public class FreeMarkerProcessor implements Processor  {
         }
     }
 
-    //返回一个HashMap 字典, 交给 freeMark 的 template 进行写入操作, 输出 markdown 文档
+    // Return a HashMap dictionary, give it to FreeMark's template for writing, and output the markdown document
     protected Object getModel(SourceBookData sourceBookData) {
         Map<String,Object> model=new HashMap<>();
         model.put("Topic", sourceBookData.getTopic());
@@ -36,24 +36,24 @@ public class FreeMarkerProcessor implements Processor  {
     }
 
     protected Template getTemplate() throws IOException {
-        //加载freemarker模板字符串
+        // Load FreeMaker template string
         Configuration configuration=new Configuration(Configuration.VERSION_2_3_29);
 
-        //创建freemarker模板配置
+        // Create FreeMaker template configuration
         String templateContent= UrlUtil.loadText(FreeMarkerProcessor.class.getResource("/template/md.ftl"));
 
-        //创建字符串模板的导入器
+        // Importer for creating string templates
         StringTemplateLoader stringTemplateLoader=new StringTemplateLoader();
 
-        //导入字符串模板
+        // Import string template
         stringTemplateLoader.putTemplate("MDTemplate",templateContent);
         configuration.setTemplateLoader(stringTemplateLoader);
 
-        //获取模板
+        // Get template
         return configuration.getTemplate("MDTemplate");
     }
 
-    //获取writer, 完成写入操作
+    // Get the writer and complete the write operation
     protected Writer getWriter(SourceBookData sourceBookData) throws FileNotFoundException, UnsupportedEncodingException {
         String fileName=sourceBookData.getFileName();
         File file=new File(fileName);

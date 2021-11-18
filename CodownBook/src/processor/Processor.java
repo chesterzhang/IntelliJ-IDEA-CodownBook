@@ -2,7 +2,7 @@ package processor;
 
 import java.io.IOException;
 
-//负责处理CodownBook 的数据, 核心方法 procee()
+// Responsible for processing the data of CodownBook, the core method is process()
 public interface Processor {
     public void process(SourceBookData  sourceBookData) throws IOException;
 }
