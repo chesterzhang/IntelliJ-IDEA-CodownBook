@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 import java.awt.*;
 
-// 鼠标右键,IDEA 中弹出来一个窗口, 这个类就是窗口类
+// Right click and a window pops up in the IDEA. This class is the window class
 public class AddCDBookDialog extends DialogWrapper {
     public AddCDBookDialog() {
         super(true);
@@ -18,41 +18,41 @@ public class AddCDBookDialog extends DialogWrapper {
         init();
     }
 
-    private EditorTextField titleField;//笔记标题文本框
-    private EditorTextField markField;//笔记内容文本框
+    private EditorTextField titleField;// Note title text box
+    private EditorTextField markField;// Note content text box
 
     @Nullable
     @Override
     protected JComponent createCenterPanel() {
-        //窗口布局
+        // Window layout
         JPanel panel= new JPanel(new BorderLayout());
-        titleField=new EditorTextField("enter title here");//创建笔记标题文本框
-        markField=new EditorTextField("enter mark here");//创建笔记内容文本框
-        markField.setPreferredSize(new Dimension(200,200));//设置笔记内容文本框大小
-        panel.add(titleField,BorderLayout.NORTH);//笔记标题文本框布局
-        panel.add(markField,BorderLayout.CENTER);//笔记内容文本框布局
+        titleField=new EditorTextField("enter title here");// Create note title text box
+        markField=new EditorTextField("enter mark here");// Create note content text box
+        markField.setPreferredSize(new Dimension(200,200));// Set note content text box size
+        panel.add(titleField,BorderLayout.NORTH);// Note title text box layout
+        panel.add(markField,BorderLayout.CENTER);// Note content text box layout
         return panel;
     }
 
     @Override
     protected JComponent createSouthPanel() {
         JPanel panel = new JPanel(new FlowLayout());
-        JButton btnAdd = new JButton("Add code note to List.");//创建一个button
+        JButton btnAdd = new JButton("Add code note to List.");// Create a button
 
-        //button监听器
+        // button listener
         btnAdd.addActionListener(e -> {
-            //从文本框获取字符串
+            // Get string from text box
             String title=titleField.getText();
             String mark=markField.getText();
-//            System.out.println(title+": "+content);
+            // System.out.println(title+": "+content);
 
-            //通过选择的文本, 在文本框内输入的标题, 内容
+            // Through the selected text, enter the title and content in the text box
             BookData bookData=new BookData(title,mark,DataCenter.SELECTED_TEXT,DataCenter.CURRENT_FILE_NAME,DataCenter.CURRENT_FILE_TYPE, DataCenter.FUNC_NAME, DataCenter.FUNC_ACCESS_MODIFIERS, DataCenter.FUNC_RETURN_TYPE, DataCenter.FUNC_PARAMETERS);
 
-            //将当前这一条笔记加入到 DataCenter中
+            // Add the current note to the DataCenter
             DataCenter.BOOK_DATA_LIST.add(bookData);
 
-            //TABLE_MODEL 是 IDEA 中用来存储表格的数据结构, addRow 方法表示 加一行数据
+            // TABLE_ Model is the data structure used to store tables in IDEA, and the addRow method represents adding a row of data
             DataCenter.TABLE_MODEL.addRow(DataConverter.convert(bookData));
         });
         panel.add(btnAdd);
