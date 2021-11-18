@@ -1,6 +1,6 @@
 package data;
 
-//将 bookData 的 title, mark, fileName, selectedText提取出来, 放到一个String数组
+// Extract the title, mark, fileName, selectedText of bookData, put them into a String array
 public class DataConverter {
     public static  String[] convert(BookData bookData){
         String[] row =new String[4];
