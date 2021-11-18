@@ -15,12 +15,12 @@ public class ExtractFunction {
     }
   	
 	public static String Extract(String targetSrc) {
-		// (\\w+):匹配public/protected/private
-		// (\\s+):匹配一个或多个空格
-		// (\\w+):匹配返回值如void，String
-		// (\\s+):匹配一个或多个空格
-		// ([_a-zA-Z]+[_a-zA-Z0-9]*):匹配函数名
-		// ([(]([^()]*)[)]):group(1) 匹配参数
+		// (\\w+):Match public/protected/private
+		// (\\s+):Match one or more spaces
+		// (\\w+):Match return value, such as void，String
+		// (\\s+):Match one or more spaces
+		// ([_a-zA-Z]+[_a-zA-Z0-9]*):Match function name
+		// ([(]([^()]*)[)]):group(1):Matching parameters
 		Pattern p = Pattern.compile("(\\s+)(\\w+)(\\s+)(\\w+)(\\s+)([_a-zA-Z]+[_a-zA-Z0-9]*)([(]([^()]*)[)])");  
 		Matcher m = p.matcher((CharSequence) targetSrc);
 		List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
