@@ -1,17 +1,17 @@
 package data;
 
-//每一行 CodownBook 的内容, 有笔记标题,  评论, 被选中的文本,  文件名, 文件类型
+// Each line of CodownBook content, including note title, comment, selected text, file name and file type
 public class BookData {
 
-    private String title;//笔记标题
-    private String mark;//评论
-    private String selectedText;//代码内被选中的内容
-    private String fileName;//文件名
-    private String fileType;//文件类型
-    private String funcName;//提取的函数名称
-    private String funcAccModifiers;//提取的函数访问修饰符
-    private String funcReturnType;//提取的函数返回值类型
-    private String funcParameters;//提取的函数参数
+    private String title;// Title
+    private String mark;// Commit
+    private String selectedText;// Selected content in code
+    private String fileName;// File name
+    private String fileType;// File type
+    private String funcName;// Extracted function name
+    private String funcAccModifiers;// Extracted function access modifier
+    private String funcReturnType;// Extracted function return value type
+    private String funcParameters;// Extracted function parameters
 
     public BookData(String title, String mark, String selectedText, String fileName, String fileType, String funcName, String funcAccModifiers, String funcReturnType, String funcParameters) {
         this.title = title;

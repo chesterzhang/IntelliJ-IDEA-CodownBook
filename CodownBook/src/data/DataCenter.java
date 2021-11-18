@@ -4,37 +4,37 @@ import javax.swing.table.DefaultTableModel;
 import java.util.LinkedList;
 import java.util.List;
 
-// 一个 CodownBook 笔记的数据集合
+// A data collection of CodownBook notes
 public class DataCenter {
 
-    //选择的文本
+    // Selected text
     public static String SELECTED_TEXT = null;
 
-    //当前选择的文本的文件名称
+    // The file name of the currently selected text
     public static String CURRENT_FILE_NAME = null;
 
-    //当前的文件类型, 由文件完整路径截取后面的文件类型而来
+    //The current file type is obtained by intercepting the following file type from the full file path
     public static String CURRENT_FILE_TYPE = null;
 
-    //一条笔记
-//    public static BookData BOOK_DATA = null;
+    // One note
+    // public static BookData BOOK_DATA = null;
     public static List<BookData> BOOK_DATA_LIST = new LinkedList<>();
 
-    //提取出的函数信息
+    // Extracted function information
     public static String FUNC_NAME = null;
     public static String FUNC_ACCESS_MODIFIERS = null;
     public static String FUNC_RETURN_TYPE = null;
     public static String FUNC_PARAMETERS = null;
 
-    //笔记表头, 标题, 评论, 文件名, 选中的文本
+    // Note header, title, comment, file name, selected text
     public static String[] BOOK_HEAD={"title","mark","fileName","selectedText"};
 
-    //笔记表格, IDEA 表格的特有数据类型 DefaultTableModel
+    // Note table, unique data type of IDEA table DefaultTableModel
     public static DefaultTableModel TABLE_MODEL=new DefaultTableModel(null,BOOK_HEAD);
 
 
 
-    //当选中代码, 右键 add CodownBook 以后, 将选中的的代码传进来
+    // When the code is selected, right-click add CodewnBook to transfer the selected code
     public static void setSelectText(String selectText) {
         SELECTED_TEXT  = selectText;
     }
@@ -63,10 +63,10 @@ public class DataCenter {
         FUNC_PARAMETERS = funcParameters;
     }
 
-    //当按下图形化窗口的 clear button 以后调用这个方法
+    // This method is called after pressing the clear button of the graphical window.
     public static void clear(){
-//        BOOK_DATA=null;
-        BOOK_DATA_LIST =null;
+    //  BOOK_DATA=null;
+        BOOK_DATA_LIST.clear();
         TABLE_MODEL.setDataVector(null, BOOK_HEAD);
 
     }
