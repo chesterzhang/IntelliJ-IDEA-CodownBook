@@ -7,7 +7,7 @@ import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 
-//让IDEA认识 我们写的 CDBookListWindow
+//Let IDEA know our CDBookListWindow
 public class BookWindowFactory implements ToolWindowFactory {
 
     @Override

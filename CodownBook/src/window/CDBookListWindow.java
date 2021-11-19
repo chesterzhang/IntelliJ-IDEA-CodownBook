@@ -45,16 +45,16 @@ public class CDBookListWindow {
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //选择路径,生成文档
+                // Select a path to generate a document
                 String bookTopic= CDBookTopicTextField.getText();
-                //获取文件名, 文件名就是 topic 加上一个 .md
+                // Get the file name, which is topic plus .md
                 String fileName = bookTopic + ".md";
                 if (bookTopic == null || bookTopic.equals("")) {
                     MessageDialogBuilder.yesNo("Warming", "Please enter CodownBook topic !");
                     return;
                 }
 
-                //获取文件路径
+                // Get the file path
                 VirtualFile virtualFile = FileChooser.chooseFile(FileChooserDescriptorFactory.createSingleFileDescriptor(), project, project.getBaseDir());
                 if (virtualFile != null) {
                     String savePath = virtualFile.getPath();
@@ -78,21 +78,21 @@ public class CDBookListWindow {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DataCenter.clear();//清空笔记
+                DataCenter.clear();// Empty notes
             }
         });
 
         closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                toolWindow.hide(null);//关闭窗口
+                toolWindow.hide(null);// Remove the last line
             }
         });
 
         undoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                DataCenter.undo();//移去最后一行
+                DataCenter.undo();// Undo
             }
         });
     }
