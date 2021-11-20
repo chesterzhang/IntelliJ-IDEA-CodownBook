@@ -22,7 +22,7 @@ public class DataCenter {
 
     // Extracted function information
     public static String FUNC_NAME = null;
-    public static String FUNC_ACCESS_MODIFIERS = null;
+    public static String FUNC_ACCESS_MODIFIER = null;
     public static String FUNC_RETURN_TYPE = null;
     public static String FUNC_PARAMETERS = null;
 
@@ -51,8 +51,8 @@ public class DataCenter {
         FUNC_NAME = funcName;
     }
 
-    public  static  void setFuncAccessModifiers(String funcAccModifiers ){
-        FUNC_ACCESS_MODIFIERS = funcAccModifiers;
+    public  static  void setFuncAccessModifier(String funcAccModifier ){
+        FUNC_ACCESS_MODIFIER = funcAccModifier;
     }
 
     public  static  void setFuncReturnType(String funcReturnType){
@@ -65,7 +65,6 @@ public class DataCenter {
 
     // This method is called after pressing the clear button of the graphical window.
     public static void clear(){
-    //  BOOK_DATA=null;
         BOOK_DATA_LIST.clear();
         TABLE_MODEL.setDataVector(null, BOOK_HEAD);
 

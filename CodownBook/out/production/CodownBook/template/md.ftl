@@ -19,7 +19,7 @@ ${bookData.selectedText}
 Function Information:
 ---------------------
 Function name: ${bookData.funcName}
-Access modifiers: ${bookData.funcAccModifiers}
+Access modifier: ${bookData.funcAccModifier}
 Return value type: ${bookData.funcReturnType}
 Parameters: ${bookData.funcParameters}
 ---------------------

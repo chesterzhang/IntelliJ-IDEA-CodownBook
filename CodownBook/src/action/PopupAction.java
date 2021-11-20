@@ -42,12 +42,12 @@ public class PopupAction extends AnAction {
         JSONObject jsonObject = jsonArray.getJSONObject(0);
 
         String funcName = jsonObject.getString("FunctionName");
-        String funcAccModifiers = jsonObject.getString("FunctionAccMod");
+        String funcAccModifier = jsonObject.getString("FunctionAccMod");
         String funcReturnType = jsonObject.getString("FunctionRetType");
         String funcParameters = jsonObject.getString("FunctionPara");
 
         DataCenter.setFuncName(funcName);
-        DataCenter.setFuncAccessModifiers(funcAccModifiers);
+        DataCenter.setFuncAccessModifier(funcAccModifier);
         DataCenter.setFuncReturnType(funcReturnType);
         DataCenter.setFuncParameters(funcParameters);
 

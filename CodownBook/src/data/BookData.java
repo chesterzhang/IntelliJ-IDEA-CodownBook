@@ -9,18 +9,18 @@ public class BookData {
     private String fileName;// File name
     private String fileType;// File type
     private String funcName;// Extracted function name
-    private String funcAccModifiers;// Extracted function access modifier
+    private String funcAccModifier;// Extracted function access modifier
     private String funcReturnType;// Extracted function return value type
     private String funcParameters;// Extracted function parameters
 
-    public BookData(String title, String mark, String selectedText, String fileName, String fileType, String funcName, String funcAccModifiers, String funcReturnType, String funcParameters) {
+    public BookData(String title, String mark, String selectedText, String fileName, String fileType, String funcName, String funcAccModifier, String funcReturnType, String funcParameters) {
         this.title = title;
         this.mark = mark;
         this.selectedText = selectedText;
         this.fileName = fileName;
         this.fileType = fileType;
         this.funcName = funcName;
-        this.funcAccModifiers = funcAccModifiers;
+        this.funcAccModifier = funcAccModifier;
         this.funcReturnType = funcReturnType;
         this.funcParameters = funcParameters;
     }
@@ -73,12 +73,12 @@ public class BookData {
         this.funcName = funcName;
     }
 
-    public String getFuncAccModifiers() {
-        return funcAccModifiers;
+    public String getFuncAccModifier() {
+        return funcAccModifier;
     }
 
-    public void setFuncAccModifiers(String funcAccModifiers) {
-        this.funcAccModifiers = funcAccModifiers;
+    public void setFuncAccModifier(String funcAccModifier) {
+        this.funcAccModifier = funcAccModifier;
     }
 
     public String getFuncReturnType() {
@@ -108,9 +108,9 @@ public class BookData {
                 ", fileName='" + fileName + '\'' +
                 ", fileType='" + fileType + '\'' +
                 ", funcName='" + funcName + '\'' +
-                ", funcName='" + funcAccModifiers + '\'' +
-                ", funcName='" + funcReturnType + '\'' +
-                ", funcName='" + funcParameters + '\'' +
+                ", funcAccModifier='" + funcAccModifier + '\'' +
+                ", funcReturnType='" + funcReturnType + '\'' +
+                ", funcParameters='" + funcParameters + '\'' +
                 '}';
     }
 
