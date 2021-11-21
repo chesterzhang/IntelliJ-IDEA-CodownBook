@@ -1,5 +1,5 @@
-<#-- 输出 markdown 模板 -->
-<#-- 变量名与FreeMarker 里面的 Model 里面的 HashMap 的 key 对应 -->
+<#-- markdown  template -->
+<#-- variable name should be the same with keys of HashMap of model of FreeMarker -->
 ## ${Topic}
 
 [TOC]
@@ -7,7 +7,7 @@
 <#list BookDataList as bookData>
 
 ### ${bookData.title}
-*${bookData.mark}*
+*${bookData.note}*
 
 ```java
 ${bookData.fileName}

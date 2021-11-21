@@ -4,7 +4,7 @@ package data;
 public class BookData {
 
     private String title;// Title
-    private String mark;// Commit
+    private String note;// note
     private String selectedText;// Selected content in code
     private String fileName;// File name
     private String fileType;// File type
@@ -13,9 +13,9 @@ public class BookData {
     private String funcReturnType;// Extracted function return value type
     private String funcParameters;// Extracted function parameters
 
-    public BookData(String title, String mark, String selectedText, String fileName, String fileType, String funcName, String funcAccModifier, String funcReturnType, String funcParameters) {
+    public BookData(String title, String note, String selectedText, String fileName, String fileType, String funcName, String funcAccModifier, String funcReturnType, String funcParameters) {
         this.title = title;
-        this.mark = mark;
+        this.note = note;
         this.selectedText = selectedText;
         this.fileName = fileName;
         this.fileType = fileType;
@@ -33,12 +33,12 @@ public class BookData {
         this.title = title;
     }
 
-    public String getMark() {
-        return mark;
+    public String getNote() {
+        return note;
     }
 
-    public void setMark(String mark) {
-        this.mark = mark;
+    public void setNote(String note) {
+        this.note = note;
     }
 
     public String getSelectedText() {
@@ -103,7 +103,7 @@ public class BookData {
     public String toString() {
         return "BookData{" +
                 "title='" + title + '\'' +
-                ", mark='" + mark + '\'' +
+                ", note='" + note + '\'' +
                 ", selectedText='" + selectedText + '\'' +
                 ", fileName='" + fileName + '\'' +
                 ", fileType='" + fileType + '\'' +

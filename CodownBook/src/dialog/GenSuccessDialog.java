@@ -29,7 +29,7 @@ public class GenSuccessDialog  extends DialogWrapper {
 
     @NotNull
     @Override
-    protected Action[] createActions() {
+        protected Action[] createActions() {
 
         Action[] var10000 =  new Action[]{super.getOKAction() };
 

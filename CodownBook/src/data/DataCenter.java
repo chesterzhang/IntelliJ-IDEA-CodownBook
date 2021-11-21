@@ -27,7 +27,7 @@ public class DataCenter {
     public static String FUNC_PARAMETERS = null;
 
     // Note header, title, comment, file name, selected text
-    public static String[] BOOK_HEAD={"title","mark","fileName","selectedText"};
+    public static String[] BOOK_HEAD={"title","notes","fileName","selectedText"};
 
     // Note table, unique data type of IDEA table DefaultTableModel
     public static DefaultTableModel TABLE_MODEL=new DefaultTableModel(null,BOOK_HEAD);

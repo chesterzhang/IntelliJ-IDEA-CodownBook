@@ -19,7 +19,7 @@ public class AddCDBookDialog extends DialogWrapper {
     }
 
     private EditorTextField titleField;// Note title text box
-    private EditorTextField markField;// Note content text box
+    private EditorTextField noteField;// Note content text box
 
     @Nullable
     @Override
@@ -27,10 +27,10 @@ public class AddCDBookDialog extends DialogWrapper {
         // Window layout
         JPanel panel= new JPanel(new BorderLayout());
         titleField=new EditorTextField("enter title here");// Create note title text box
-        markField=new EditorTextField("enter mark here");// Create note content text box
-        markField.setPreferredSize(new Dimension(400,400));// Set note content text box size
+        noteField=new EditorTextField("enter some notes here");// Create note content text box
+        noteField.setPreferredSize(new Dimension(400,400));// Set note content text box size
         panel.add(titleField,BorderLayout.NORTH);// Note title text box layout
-        panel.add(markField,BorderLayout.CENTER);// Note content text box layout
+        panel.add(noteField,BorderLayout.CENTER);// Note content text box layout
         return panel;
     }
 
@@ -43,11 +43,11 @@ public class AddCDBookDialog extends DialogWrapper {
         btnAdd.addActionListener(e -> {
             // Get string from text box
             String title=titleField.getText();
-            String mark=markField.getText();
+            String note=noteField.getText();
             // System.out.println(title+": "+content);
 
             // Through the selected text, enter the title and content in the text box
-            BookData bookData=new BookData(title,mark,DataCenter.SELECTED_TEXT,DataCenter.CURRENT_FILE_NAME,DataCenter.CURRENT_FILE_TYPE, DataCenter.FUNC_NAME, DataCenter.FUNC_ACCESS_MODIFIER, DataCenter.FUNC_RETURN_TYPE, DataCenter.FUNC_PARAMETERS);
+            BookData bookData=new BookData(title,note,DataCenter.SELECTED_TEXT,DataCenter.CURRENT_FILE_NAME,DataCenter.CURRENT_FILE_TYPE, DataCenter.FUNC_NAME, DataCenter.FUNC_ACCESS_MODIFIER, DataCenter.FUNC_RETURN_TYPE, DataCenter.FUNC_PARAMETERS);
 
             // Add the current note to the DataCenter
             DataCenter.BOOK_DATA_LIST.add(bookData);

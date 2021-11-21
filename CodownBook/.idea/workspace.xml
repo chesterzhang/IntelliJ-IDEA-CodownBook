@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0521a98e-632d-4e6f-a34e-9b23ea5d6e5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CodownBook.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CodownBookTest/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CodownBookTest/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CodownBookTest/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CodownBookTest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CodownBookTest/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CodownBookTest/src/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodownBook.zip" beforeDir="false" afterPath="$PROJECT_DIR$/CodownBook.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CodownBook/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CodownBook/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CodownBook/action/PopupAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CodownBook/action/PopupAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CodownBook/data/BookData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CodownBook/data/BookData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CodownBook/data/DataCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CodownBook/data/DataCenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CodownBook/dialog/AddCDBookDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CodownBook/dialog/AddCDBookDialog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CodownBook/template/md.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CodownBook/template/md.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/template/md.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/template/md.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/PopupAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/PopupAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/BookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/BookData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/DataCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DataCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/DataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DataConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dialog/AddCDBookDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dialog/AddCDBookDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dialog/GenSuccessDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dialog/GenSuccessDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodownBookTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CodownBookTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodownBookTest/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CodownBookTest/src/Calculator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +81,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
