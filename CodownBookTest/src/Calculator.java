@@ -1,8 +1,10 @@
 public class Calculator {
 
-    public static void add(int a, int b){
-        int c=a+b;
-        System.out.println("a + b = "+ c);
+    public Calculator() {
+    }
+
+    public static int add(int a, int b){
+        return a+b;
     }
 
     public static float mult(float a , float b){
@@ -11,7 +13,7 @@ public class Calculator {
 
     @Override
     public String toString() {
-        return "This is a simple test file.";
+        return "This is a calculator, we can do addition and multiplication.";
     }
 
 }
