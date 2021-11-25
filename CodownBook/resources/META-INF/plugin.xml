@@ -1,11 +1,18 @@
 <idea-plugin>
   <id>team.CodownBook</id>
   <name>CodownBook</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <vendor email="chesterzhang666@gmail.com" url="https://github.com/chesterzhang/IntelliJ-IDEA-CodownBook">cityU CS5351 21 fall code-base project group 6</vendor>
 
   <description><![CDATA[
-      CodownBook: a document generation plugin of IntelliJ IDEA.<br>
+      CodownBook is an efficient document generation plugin. It support managing multiple notes and exporting them in a tool window.<br>
+      It can do these works: <br>
+      Extract the function information(function name, return type, paramters, access modifier).<br>
+      Take some notes without modifying the source file .<br>
+      Manage multiple notes in a tool window .<br>
+      Display the notes in a tool window .<br>
+      Export the notes with a given template .<br>
+      Select a path to save the output file .<br>
     ]]></description>
 
   <change-notes><![CDATA[

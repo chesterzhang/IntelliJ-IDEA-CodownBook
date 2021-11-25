@@ -18,7 +18,7 @@ public class GenSuccessDialog  extends DialogWrapper {
     @Nullable
     @Override
     protected JComponent createCenterPanel() {
-        //窗口布局
+
         JPanel panel= new JPanel(new BorderLayout());
         JLabel OKLabel =new JLabel("CodownBook is generated successfully!");
 
