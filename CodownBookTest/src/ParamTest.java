@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class ParamTest {
     //test none
     public   void paramTest0( ){

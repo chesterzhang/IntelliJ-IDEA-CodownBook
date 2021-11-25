@@ -1,13 +1,16 @@
 public class Calculator {
 
+    //constructor
     public Calculator() {
     }
 
-    public static int add(int a, int b){
+    //addition
+    public int add(int a, int b){
         return a+b;
     }
 
-    public static float mult(float a , float b){
+    //multiplication
+    public float mult(float a , float b){
         return a*b;
     }
 

@@ -15,5 +15,10 @@ public class AccModifierTest {
 
     }
 
+    //test default
+    void testDefault(){
+
+    }
+
 
 }
