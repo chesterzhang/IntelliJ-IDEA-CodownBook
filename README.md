@@ -4,64 +4,22 @@
 
 Here are our group members and their student ID:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg" style="undefined;table-layout: fixed; width: 262px">
-<colgroup>
-<col style="width: 144px">
-<col style="width: 118px">
-</colgroup>
-<thead>
-  <tr>
-    <th class="tg-c3ow"><span style="font-weight:bold">Name</span></th>
-    <th class="tg-c3ow"><span style="font-weight:bold">Student ID</span></th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">ZHANG HUACAN</td>
-    <td class="tg-c3ow">56952429</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">WU Yidu</td>
-    <td class="tg-c3ow">56767955</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">ZHU Jingxian</td>
-    <td class="tg-c3ow">56805884</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">YANG Yinze</td>
-    <td class="tg-c3ow">56778411</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">LI Hongze</td>
-    <td class="tg-c3ow">57013670</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">XIA Ming</td>
-    <td class="tg-c3ow">56903411</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">JIN Xuanyi</td>
-    <td class="tg-baqh">56962320</td>
-  </tr>
-</tbody>
-</table>
-
+|     Name     | Student ID |
+|:------------:|:----------:|
+| ZHANG HUACAN |  56952429  |
+| WU Yidu      |  56767955  |
+| ZHU Jingxian |  56805884  |
+| YANG Yinze   |  56778411  |
+| LI Hongze    |  57013670  |
+| XIA Ming     |  56903411  |
+| JIN Xuanyi   |  56962320  |
 
 ## What is CodownBook?
 
 CodownBook is an efficient document generation plugin of IntelliJ IDEA. It was successfully  published and deployed in the [JetBrains marketplace](https://plugins.jetbrains.com/plugin/18053-codownbook) !
+
+![marketplace](./doc/image/marketplace.png)
+
 
 It supports managing multiple notes and exporting them in a simple way. Specifically, it contains those attributes:
 
