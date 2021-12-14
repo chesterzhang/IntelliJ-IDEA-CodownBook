@@ -6,7 +6,7 @@ Here are our group members and their student ID:
 
 |     Name     | Student ID |
 |:------------:|:----------:|
-| ZHANG HUACAN |  56952429  |
+| ZHANG Huacan |  56952429  |
 | WU Yidu      |  56767955  |
 | ZHU Jingxian |  56805884  |
 | YANG Yinze   |  56778411  |
