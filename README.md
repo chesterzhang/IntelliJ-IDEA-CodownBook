@@ -1,22 +1,10 @@
 # *CodownBook* : a document generation plugin of IntelliJ IDEA
 
-**Welcome to code-based Project Team 6 's github repository !** 
 
-Here are our group members and their student ID:
-
-|     Name     | Student ID |
-|:------------:|:----------:|
-| ZHANG Huacan |  56952429  |
-| WU Yidu      |  56767955  |
-| ZHU Jingxian |  56805884  |
-| YANG Yinze   |  56778411  |
-| LI Hongze    |  57013670  |
-| XIA Ming     |  56903411  |
-| JIN Xuanyi   |  56962320  |
 
 ## What is CodownBook?
 
-CodownBook is an efficient document generation plugin of IntelliJ IDEA. It was successfully  published and deployed in the [JetBrains marketplace](https://plugins.jetbrains.com/plugin/18053-codownbook) !
+CodownBook is an efficient document generation plugin of IntelliJ IDEA. It was successfully  published and deployed in the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/18053-codownbook) !
 
 ![marketplace](./doc/image/marketplace.png)
 
